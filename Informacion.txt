@@ -1,0 +1,65 @@
+NodeJs
+
+Js del lado del servidor - es node.js
+Delega los procesos, recibe lo que el usuario quiere hacer, y lo distribuye (BD, disco duro, procesador)
+
+Es un entorno de ejecución, permite ejecutar js en el SO
+
+USOS:
+apps de escritorio
+Frameworks
+
+MONGODBB - Es una base de datos que utiliza js 
+Json - Formato de intercambio de datos entre aplicaciones
+Permite ejecutar js para crear aplicaciones de servidor
+
+Es multiplataforma, se puede instalar en todos los SOs+
+
+- Para ejecutar el código es node + NombreArchivo.js
+- Una aplicación se divide en varias partes, en node.js a esto se le conoce como modulos
+
+Ejemplo:
+Si se necesita un programa que realiza operaciones matemáticas, se podria dividir en un modulo
+1. matemática.js, este contendrá las operaciones y estas seran llamadas en el archivo principal
+
+FUNCIONES / CLASES node
+- require('./NombreArchivo.js'); -> Se importa otro fichero al actual. Similar a import de Java
+./ = carpeta principal o misma carpeta
+
+//math.sumar(); -> Desde el modulo matematica, usar la funcion sumar
+//.alias -> se le asigna el alias para ser usado con ese nombre
+- exports.suma = suma; -> Se exportan las funciones para que los demas archivos la utiicen
+- module.exports = math -> Se crea un objeto y se guardan las funciones para exportarlas
+
+Nodejs contiene módulos que podemos usar sin tener que escribir ese código desde cero.
+En la documentación se pueden encontrar dichos módulos
+
+CALLBACK: Es una funcion que se ejecuta una vez, el proceso anterior finalizó
+ASINCRONO: Al tener un servidor y querer leer un archivo el SO se va a encargar de la tarea, asi mismo, al realizar una consulta, el lenguaje de consulta se encargará de ello, no NodeJs
+//Delega las tareas
+
+CÓDIGO BLOQUEANTE, CÓDIGO ASÍNCRONO
+El código bloqueante ejecuta las demás lineas hasta que se termine la tarea, en cambio, los bloques asíncronos permiten hacerlo, ya que NodeJs delega las tareas
+
+SERVIDOR......
+
+//El servidor recibe las peticiones, y envia una respuesta para cada una
+http -> A diario usamos este protocolo, y es una forma de comunicación entre el cliente-servidor
+//Los dispositivos realizan una petición http al servidor
+
+codigo de estado http -> Es la forma de verificar si la comunicación entre cliente-servidor fue exitosa
+
+NPM - Node Package Manager
+Nos permite administrar paquetes o modulos nuevos.
+Desde el sitio podremos encontrar repositorios de todo tipo, comunidad de devs
+
+INSTALAR APP DESDE OTRO PC
+- Se crea una lista con todos los módulos de nuestro proyecto
+npm init -> Pide información del proyecto
+
+SUBIR PROYECTO A UN SERVIDOR REAL
+npm install -> Lee el Package.json, y lo descarga
+//Tiene un listado de todos los módulos que vamos a usar en el proyecto
+
+Frameworks
+- expressjs -> Nos permite crear servidores con menos código
